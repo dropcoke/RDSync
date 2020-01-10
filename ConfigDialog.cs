@@ -120,7 +120,7 @@ namespace RDSync
             }
             catch (IOException ex)
             {
-                MessageBox.Show(String.Format(Properties.Resources.Error, ex.Message),
+                MessageBox.Show(ex.Message,
                                 Properties.Resources.ErrorCaption,
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error

@@ -100,7 +100,6 @@ namespace RDSync
         private void Cancel()
         {
             this.Reset();
-
             this.lblFileName.Text = Properties.Resources.FileNameMessageCancel;
             this.progressBar1.Visible = false;
         }
@@ -153,7 +152,7 @@ namespace RDSync
             }
             catch (IOException ex)
             {
-                MessageBox.Show(String.Format(Properties.Resources.Error, ex.Message),
+                MessageBox.Show(ex.Message,
                                 Properties.Resources.ErrorCaption,
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error
