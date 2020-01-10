@@ -223,7 +223,7 @@ namespace RDSync
         private void btnFileSkipped_Click(object sender, EventArgs e)
         {
             SkippedFileList skippedFileList = new SkippedFileList();
-            skippedFileList.SetFileList(String.Join(",", this.noneCopiedList));
+            skippedFileList.SetFileList(String.Join("\r\n", this.noneCopiedList));
             skippedFileList.Show();
         }
                 

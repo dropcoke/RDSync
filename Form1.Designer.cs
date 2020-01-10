@@ -80,7 +80,7 @@
             // lblProgress
             // 
             this.lblProgress.AutoSize = true;
-            this.lblProgress.Location = new System.Drawing.Point(115, 149);
+            this.lblProgress.Location = new System.Drawing.Point(49, 151);
             this.lblProgress.Name = "lblProgress";
             this.lblProgress.Size = new System.Drawing.Size(62, 12);
             this.lblProgress.TabIndex = 11;
@@ -89,7 +89,7 @@
             // lblFileCount
             // 
             this.lblFileCount.AutoSize = true;
-            this.lblFileCount.Location = new System.Drawing.Point(115, 126);
+            this.lblFileCount.Location = new System.Drawing.Point(49, 128);
             this.lblFileCount.Name = "lblFileCount";
             this.lblFileCount.Size = new System.Drawing.Size(66, 12);
             this.lblFileCount.TabIndex = 10;
@@ -98,7 +98,7 @@
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
-            this.lblFileName.Location = new System.Drawing.Point(115, 104);
+            this.lblFileName.Location = new System.Drawing.Point(49, 106);
             this.lblFileName.Name = "lblFileName";
             this.lblFileName.Size = new System.Drawing.Size(65, 12);
             this.lblFileName.TabIndex = 9;
@@ -108,9 +108,9 @@
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(117, 178);
+            this.progressBar1.Location = new System.Drawing.Point(51, 180);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(524, 29);
+            this.progressBar1.Size = new System.Drawing.Size(678, 29);
             this.progressBar1.TabIndex = 8;
             // 
             // btnTransfer
@@ -118,9 +118,9 @@
             this.btnTransfer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTransfer.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnTransfer.Location = new System.Drawing.Point(117, 43);
+            this.btnTransfer.Location = new System.Drawing.Point(51, 45);
             this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Size = new System.Drawing.Size(524, 31);
+            this.btnTransfer.Size = new System.Drawing.Size(678, 31);
             this.btnTransfer.TabIndex = 7;
             this.btnTransfer.Text = "btnTransfer";
             this.btnTransfer.UseVisualStyleBackColor = true;
@@ -131,9 +131,9 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnCancel.Location = new System.Drawing.Point(117, 43);
+            this.btnCancel.Location = new System.Drawing.Point(51, 45);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(524, 31);
+            this.btnCancel.Size = new System.Drawing.Size(678, 31);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -141,9 +141,9 @@
             // 
             // btnFileSkipped
             // 
-            this.btnFileSkipped.Location = new System.Drawing.Point(462, 149);
+            this.btnFileSkipped.Location = new System.Drawing.Point(396, 151);
             this.btnFileSkipped.Name = "btnFileSkipped";
-            this.btnFileSkipped.Size = new System.Drawing.Size(179, 23);
+            this.btnFileSkipped.Size = new System.Drawing.Size(333, 23);
             this.btnFileSkipped.TabIndex = 13;
             this.btnFileSkipped.Text = "btnFileSkipped";
             this.btnFileSkipped.UseVisualStyleBackColor = true;
