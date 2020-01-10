@@ -11,3 +11,9 @@ dotnet_diagnostic.CA1819.severity = none
 
 # CA1305: IFormatProvider を指定します
 dotnet_diagnostic.CA1305.severity = none
+
+# CA1062: パブリック メソッドの引数の検証
+dotnet_diagnostic.CA1062.severity = none
+
+# IDE0055: 書式設定を修正します。
+dotnet_diagnostic.IDE0055.severity = none

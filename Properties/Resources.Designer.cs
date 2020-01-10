@@ -151,7 +151,7 @@ namespace RDSync.Properties {
         }
         
         /// <summary>
-        ///   {0}({1}MB)を処理しています。 に類似しているローカライズされた文字列を検索します。
+        ///   {0}({1}MB)を{2}にコピーしています。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string FileNameMessage {
             get {
@@ -183,6 +183,15 @@ namespace RDSync.Properties {
         internal static string Form1BtnCancel {
             get {
                 return ResourceManager.GetString("Form1BtnCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   コピーできなかったファイル に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Form1BtnSkippedFile {
+            get {
+                return ResourceManager.GetString("Form1BtnSkippedFile", resourceCulture);
             }
         }
         
@@ -241,7 +250,16 @@ namespace RDSync.Properties {
         }
         
         /// <summary>
-        ///   {0}MB / {1}MB ({2}%)の処理が完了しました。 (終了まで残り{3}) に類似しているローカライズされた文字列を検索します。
+        ///   コピーをスキップしました。{0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotCopiedFile {
+            get {
+                return ResourceManager.GetString("NotCopiedFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {0}MB / {1}MB ({2}%)の処理が完了しました。 (終了まで{3}) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ProgressMessage {
             get {
@@ -301,6 +319,33 @@ namespace RDSync.Properties {
         internal static string RemainTimeSecond {
             get {
                 return ResourceManager.GetString("RemainTimeSecond", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   コピーできなかったファイル に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SkippedFileListText {
+            get {
+                return ResourceManager.GetString("SkippedFileListText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   所用時間: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TimeExecutedText {
+            get {
+                return ResourceManager.GetString("TimeExecutedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   残り に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TimeRemainText {
+            get {
+                return ResourceManager.GetString("TimeRemainText", resourceCulture);
             }
         }
         

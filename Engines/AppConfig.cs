@@ -16,12 +16,12 @@ namespace RDSync.Engines
         /// <summary>
         /// Path of AppDataFile stored
         /// </summary>
-        public static string DATA_PATH = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        private static string dataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
                 + Path.DirectorySeparatorChar + "RDSync";
         /// <summary>
         /// configuration file name
         /// </summary>
-        public static string FILE_NAME = "config.xml";
+        private static string fileName = "config.xml";
         /// <summary>
         /// Date Format for Direcotry Name
         /// </summary>
@@ -31,8 +31,13 @@ namespace RDSync.Engines
         /// </summary>
         private List<MediaConfig> mediaConfigList;
 
+        public const string NonSkippedFile = "skippedfile_{0}.csv";
+
         public string DateFormat { get => dateFormat; set => dateFormat = value; }
         public List<MediaConfig> MediaConfigList { get => mediaConfigList; set => mediaConfigList = value; }
+        public static string DataPath { get => dataPath; }
+        public static string FileName { get => fileName; }
+
         /// <summary>
         /// To Get Application Config
         /// </summary>
@@ -91,7 +96,7 @@ namespace RDSync.Engines
         public static void Store(AppConfig appConfig)
         {
             // Confirm if data directory exists
-            DirectoryInfo directory = new DirectoryInfo(DATA_PATH);
+            DirectoryInfo directory = new DirectoryInfo(DataPath);
             // if directory does not exist it is created
             if (!directory.Exists)
                 directory.Create();
@@ -108,7 +113,7 @@ namespace RDSync.Engines
         /// <returns></returns>
         public static string GetConfigFilePath()
         {
-            return DATA_PATH + Path.DirectorySeparatorChar + FILE_NAME;
+            return DataPath + Path.DirectorySeparatorChar + FileName;
         }
     }
 }
