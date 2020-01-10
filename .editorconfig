@@ -1,0 +1,13 @@
+﻿[*.{cs,vb}]
+
+# IDE0049: 名前を単純化します
+dotnet_style_predefined_type_for_locals_parameters_members = true:silent
+
+# CA2227: コレクション プロパティは読み取り専用でなければなりません
+dotnet_diagnostic.CA2227.severity = none
+
+# CA1819: プロパティは配列を返すことはできません
+dotnet_diagnostic.CA1819.severity = none
+
+# CA1305: IFormatProvider を指定します
+dotnet_diagnostic.CA1305.severity = none

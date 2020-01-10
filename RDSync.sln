@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDSync", "RDSync.csproj", "{FC6948B9-BB49-40B3-9680-F5B07C4444ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{682B896C-F5B7-473C-A52D-35C88CD482A3}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		..\..\..\Downloads\RDS.ico = ..\..\..\Downloads\RDS.ico
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC6948B9-BB49-40B3-9680-F5B07C4444ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6948B9-BB49-40B3-9680-F5B07C4444ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6948B9-BB49-40B3-9680-F5B07C4444ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6948B9-BB49-40B3-9680-F5B07C4444ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A39321F1-00C3-4110-87A7-8D0C2226B9B7}
+	EndGlobalSection
+EndGlobal
