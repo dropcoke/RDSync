@@ -115,6 +115,9 @@ namespace RDSync
         {
             try
             {
+                ConfigData.MediaTypeList[MediaType.Image].MediaRootPath = this.txtDestinationImage.Text;
+                ConfigData.MediaTypeList[MediaType.Video].MediaRootPath = this.txtDestinationVideo.Text;
+                ConfigData.MediaTypeList[MediaType.Audio].MediaRootPath = this.txtDestinationAudio.Text;
                 AppConfig.Store(ConfigData.AppConfig);
                 this.Close();
             }
