@@ -11,8 +11,8 @@ namespace RDSync.Engines
         /// Default extensions
         /// </summary>
         private static string[] defaultExtensionImage = { ".jpg", ".png", ".gif", ".raw" };
-        private static string[] defaultExtensionVideo = { ".mov", ".mp4", ".avi", ".mpg", ".m4a", ".wmv", ".flv", ".mts", ".m2ts" };
-        private static string[] defaultExtensionAudio = { ".mp3", ".wav", ".aiff", ".aac", "aif" };
+        private static string[] defaultExtensionVideo = { ".mov", ".mp4", ".avi", ".mpg", ".wmv", ".flv", ".mts", ".m2ts" };
+        private static string[] defaultExtensionAudio = { ".mp3", ".wav", ".aiff", ".aac", "aif", ".m4a" };
         private static string[] defaultExtensionExcel = { ".xlsx", ".xls" };
         private static string[] defaultExtensionWord = { ".docs", ".doc" };
         private static string[] defaultExtensionPdf = { ".pdf" };

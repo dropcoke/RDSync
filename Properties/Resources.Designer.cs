@@ -178,6 +178,15 @@ namespace RDSync.Properties {
         }
         
         /// <summary>
+        ///   保存先の設定をしてください。 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string FileTransferRequireConfig {
+            get {
+                return ResourceManager.GetString("FileTransferRequireConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   処理を停止する。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Form1BtnCancel {

@@ -156,6 +156,9 @@
   <data name="FileNameMessageError" xml:space="preserve">
     <value>{0}でエラーが発生しました。</value>
   </data>
+  <data name="FileTransferRequireConfig" xml:space="preserve">
+    <value>保存先の設定をしてください。</value>
+  </data>
   <data name="Form1BtnCancel" xml:space="preserve">
     <value>処理を停止する。</value>
   </data>

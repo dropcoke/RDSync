@@ -46,7 +46,7 @@ namespace RDSync.Engines
             if (file == null)
             {
                 // if configuration file does not exists, exit.
-                throw new Exception("Require application setting");
+                throw new Exception(Properties.Resources.FileTransferRequireConfig);
             }
             // Get configuration data
             this.appConfig = AppConfig.GetAppConfig();

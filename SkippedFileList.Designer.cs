@@ -40,6 +40,7 @@
             this.txtSkippedFileList.Multiline = true;
             this.txtSkippedFileList.Name = "txtSkippedFileList";
             this.txtSkippedFileList.ReadOnly = true;
+            this.txtSkippedFileList.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtSkippedFileList.Size = new System.Drawing.Size(516, 263);
             this.txtSkippedFileList.TabIndex = 0;
             // 
