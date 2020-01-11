@@ -48,7 +48,6 @@ namespace RDSync
             this.lblFileName.Text = String.Empty;
             this.lblFileCount.Text = String.Empty;
             this.lblProgress.Text = String.Empty;
-            FileInfo configFile = AppConfig.ExistConfigFile();
             this.executing = false;
             foreach (Control control in this.Controls)
             {
