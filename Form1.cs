@@ -105,9 +105,9 @@ namespace RDSync
             int minuteSeconds = 60;
             int days = remainSeconds / daySeconds;
             int seconds = (int)remainSeconds - daySeconds * days;
-            int hours = remainSeconds / hourSeconds;
+            int hours = seconds / hourSeconds;
             seconds -= hourSeconds * hours;
-            int minutes = remainSeconds / minuteSeconds;
+            int minutes = seconds / minuteSeconds;
             seconds -= minuteSeconds * minutes;
             Dictionary<TimeUnit, int> returnValue =
                     new Dictionary<TimeUnit, int>{ { TimeUnit.Day, days }, { TimeUnit.Hour, hours },
