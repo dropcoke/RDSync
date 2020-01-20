@@ -36,7 +36,7 @@ namespace RDSync
         {
             Timer timer = new Timer();
             timer.Tick += new EventHandler(this.WatchRemovableDrive);
-            timer.Interval = 60000;
+            timer.Interval = 20000;
             timer.Enabled = true;
         }
         private void WatchRemovableDrive(object sender, EventArgs e)

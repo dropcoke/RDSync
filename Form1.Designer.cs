@@ -34,7 +34,6 @@
             this.lblFileName = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnFileSkipped = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblProgress
@@ -86,22 +85,11 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnFileSkipped
-            // 
-            this.btnFileSkipped.Location = new System.Drawing.Point(396, 151);
-            this.btnFileSkipped.Name = "btnFileSkipped";
-            this.btnFileSkipped.Size = new System.Drawing.Size(333, 23);
-            this.btnFileSkipped.TabIndex = 13;
-            this.btnFileSkipped.Text = "btnFileSkipped";
-            this.btnFileSkipped.UseVisualStyleBackColor = true;
-            this.btnFileSkipped.Click += new System.EventHandler(this.btnFileSkipped_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 251);
-            this.Controls.Add(this.btnFileSkipped);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.lblFileCount);
@@ -123,7 +111,6 @@
         private System.Windows.Forms.Label lblFileName;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnFileSkipped;
     }
 }
 

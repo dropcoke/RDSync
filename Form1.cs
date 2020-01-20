@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using RDSync.Engines;
+using System.Threading;
 
 namespace RDSync
 {
@@ -30,7 +31,6 @@ namespace RDSync
         {
             this.Text = Properties.Resources.Form1Text;
             this.btnCancel.Text = Properties.Resources.Form1BtnCancel;
-            this.btnFileSkipped.Text = Properties.Resources.Form1BtnSkippedFile;
             this.Reset();
         }
         private void Reset()
@@ -47,8 +47,6 @@ namespace RDSync
             this.btnCancel.Visible = false;
             this.btnCancel.Enabled = false;
             this.progressBar1.Visible = false;
-            this.btnFileSkipped.Enabled = false;
-            this.btnFileSkipped.Visible = false;
         }
         /// <summary>
         /// 
@@ -60,8 +58,6 @@ namespace RDSync
             this.progressBar1.Visible = true;
             this.btnCancel.Visible = true;
             this.btnCancel.Enabled = true;
-            this.btnFileSkipped.Enabled = false;
-            this.btnFileSkipped.Visible = false;
         }
 
         private string GetRemainTime(DateTime start, double percentage)
@@ -155,15 +151,13 @@ namespace RDSync
                     Refresh();
                     Application.DoEvents();
                 };
-                this.Reset();
                 if (this.noneCopiedList.Count > 0)
                 {
-                    this.btnFileSkipped.Enabled = true;
-                    this.btnFileSkipped.Visible = true;
+                    SkippedFileList skippedFileList = new SkippedFileList();
+                    skippedFileList.SetFileList(String.Join("\r\n", this.noneCopiedList));
+                    skippedFileList.Show();
                 }
                 TimeSpan timeSpan = DateTime.Now.Subtract(start);
-                this.lblProgress.Text = this.GetTimeText(this.CreateTimeData((int)timeSpan.TotalSeconds))
-                            .Replace(Properties.Resources.TimeRemainText, Properties.Resources.TimeExecutedText);
                 this.lblFileCount.Text = String.Format(Properties.Resources.FileCountMessage, fileCount, fileTransfer.FileCount);
             }
             catch (IOException ex)
@@ -189,15 +183,7 @@ namespace RDSync
         {
             this.executing = false;
             this.progressBar1.Value = 0;
-        }
-
-        private void btnFileSkipped_Click(object sender, EventArgs e)
-        {
-            SkippedFileList skippedFileList = new SkippedFileList();
-            skippedFileList.SetFileList(String.Join("\r\n", this.noneCopiedList));
-            skippedFileList.Show();
-        }
-                
+        }              
     }
 
     enum TimeUnit {
