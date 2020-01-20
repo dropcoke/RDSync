@@ -13,6 +13,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2020 Shumatz")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: AssemblyVersion("0.1.1")]
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config")]
 
 // ComVisible を false に設定すると、このアセンブリ内の型は COM コンポーネントから

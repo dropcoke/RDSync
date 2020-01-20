@@ -168,7 +168,7 @@ namespace RDSync.Engines
         /// <returns></returns>
         public string GetDestinationDirectory(MediaConfig mediaConfig, FileInfo file)
         {
-            string creationDate = file.CreationTime.ToString(this.appConfig.DateFormat);
+            string creationDate = file.LastWriteTime.ToString(this.appConfig.DateFormat);
             DirectoryInfo directory = new DirectoryInfo(mediaConfig.MediaRootPath);
             if (!directory.Exists)
                 directory.Create();
