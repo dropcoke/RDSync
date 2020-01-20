@@ -171,12 +171,6 @@
   <data name="Form1MenuFile" xml:space="preserve">
     <value>ファイル(&amp;F)</value>
   </data>
-  <data name="Form1MenuFileOption" xml:space="preserve">
-    <value>設定(&amp;O)</value>
-  </data>
-  <data name="Form1MenuFileQuit" xml:space="preserve">
-    <value>終了(&amp;X)</value>
-  </data>
   <data name="Form1Text" xml:space="preserve">
     <value>RDSync</value>
   </data>
@@ -210,6 +204,12 @@
   </data>
   <data name="SkippedFileListText" xml:space="preserve">
     <value>コピーできなかったファイル</value>
+  </data>
+  <data name="TaskTrayMenuConfig" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="TaskTrayMenuQuit" xml:space="preserve">
+    <value>終了</value>
   </data>
   <data name="TimeExecutedText" xml:space="preserve">
     <value>所用時間:</value>

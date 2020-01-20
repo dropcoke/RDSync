@@ -20,7 +20,7 @@ namespace RDSync
         public Form1()
         {
             InitializeComponent();
-            ConfigData.Init();
+            //ConfigData.Init();
             Init();
         }
         /// <summary>
@@ -29,19 +29,9 @@ namespace RDSync
         private void Init()
         {
             this.Text = Properties.Resources.Form1Text;
-            this.menuFile.Text = Properties.Resources.Form1MenuFile;
-            this.menuFileOption.Text = Properties.Resources.Form1MenuFileOption;
-            this.menuFileQuit.Text = Properties.Resources.Form1MenuFileQuit;
             this.btnCancel.Text = Properties.Resources.Form1BtnCancel;
-            this.btnTransfer.Text = Properties.Resources.Form1BtnTransferText;
             this.btnFileSkipped.Text = Properties.Resources.Form1BtnSkippedFile;
             this.Reset();
-            FileInfo configFile = AppConfig.ExistConfigFile();
-            if (configFile == null)
-            {
-                this.btnTransfer.Enabled = false;
-                this.ShowConfigDialog();
-            }
         }
         private void Reset()
         {
@@ -56,7 +46,6 @@ namespace RDSync
             }
             this.btnCancel.Visible = false;
             this.btnCancel.Enabled = false;
-            this.menuFile.Enabled = true;
             this.progressBar1.Visible = false;
             this.btnFileSkipped.Enabled = false;
             this.btnFileSkipped.Visible = false;
@@ -67,11 +56,8 @@ namespace RDSync
         private void Execute()
         {
             this.progressBar1.Value = 0;
-            this.btnTransfer.Enabled = false;
-            this.menuFile.Enabled = false;
             this.executing = true;
             this.progressBar1.Visible = true;
-            this.btnTransfer.Visible = false;
             this.btnCancel.Visible = true;
             this.btnCancel.Enabled = true;
             this.btnFileSkipped.Enabled = false;
@@ -122,7 +108,7 @@ namespace RDSync
             this.lblFileName.Text = Properties.Resources.FileNameMessageCancel;
             this.progressBar1.Visible = false;
         }
-        private void btnTransfer_Click(object sender, EventArgs e)
+        public void TransferFile(FileTransfer fileTransfer)
         {
             this.executing = true;
             this.Execute();
@@ -133,8 +119,6 @@ namespace RDSync
             try
             {
                 DateTime start = DateTime.Now;
-                FileTransfer fileTransfer = new FileTransfer();
-                fileTransfer.Init();
                 foreach (FileInfo file in fileTransfer.CopyFileList)
                 {
                     if (!this.executing)
@@ -156,13 +140,14 @@ namespace RDSync
                         continue;
                     }
                     this.lblFileName.Text = String.Format(Properties.Resources.FileNameMessage, file.FullName, file.Length / 1000000, path);
+                    Refresh();
                     file.CopyTo(path);
                     fileCount++;
                     totalSize += file.Length;
 
                     double percentage = (double)((double)totalSize / (double)fileTransfer.TotalSize) * 100;
                     this.progressBar1.Value = (int)percentage;
-                    
+
                     fileName = file.FullName;
                     this.lblFileCount.Text = String.Format(Properties.Resources.FileCountMessage, fileCount, fileTransfer.FileCount);
                     this.lblProgress.Text = String.Format(Properties.Resources.ProgressMessage,
@@ -191,21 +176,8 @@ namespace RDSync
                 log.Error(ex.Message, ex);
                 this.Init();
                 this.lblFileName.Text = String.Format(Properties.Resources.FileNameMessageError, fileName);
+                throw new Exception(ex.Message, ex);
             }
-
-        }
-
-        private void menuFileOption_Click(object sender, EventArgs e)
-        {
-            this.ShowConfigDialog();
-        }
-
-        private void ShowConfigDialog()
-        {
-            ConfigDialog config = new ConfigDialog();
-            config.ShowDialog();
-            config.Dispose();
-            Init();
         }
 
         private void menuFileQuit_Click(object sender, EventArgs e)

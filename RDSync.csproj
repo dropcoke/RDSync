@@ -99,6 +99,12 @@
     <Compile Include="SkippedFileList.Designer.cs">
       <DependentUpon>SkippedFileList.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaskTray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskTray.Designer.cs">
+      <DependentUpon>TaskTray.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ConfigDialog.resx">
       <DependentUpon>ConfigDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="SkippedFileList.resx">
       <DependentUpon>SkippedFileList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskTray.resx">
+      <DependentUpon>TaskTray.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
     <None Include="log4net.config">

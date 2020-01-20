@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,9 +15,21 @@ namespace RDSync
         [STAThread]
         static void Main()
         {
+            //ミューテックス作成
+            Mutex mutex = new Mutex(false, "RDSync");
+
+            //ミューテックスの所有権を要求する
+            if (mutex.WaitOne(0, false) == false)
+            {
+                return;
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            ConfigData.Init();
+            TaskTray task = new TaskTray();
+            Application.Run();
+            task.Dispose();
+            mutex.Dispose();
         }
     }
 }

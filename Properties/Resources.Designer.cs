@@ -223,24 +223,6 @@ namespace RDSync.Properties {
         }
         
         /// <summary>
-        ///   設定(&amp;O) に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string Form1MenuFileOption {
-            get {
-                return ResourceManager.GetString("Form1MenuFileOption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   終了(&amp;X) に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string Form1MenuFileQuit {
-            get {
-                return ResourceManager.GetString("Form1MenuFileQuit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   RDSync に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Form1Text {
@@ -337,6 +319,24 @@ namespace RDSync.Properties {
         internal static string SkippedFileListText {
             get {
                 return ResourceManager.GetString("SkippedFileListText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   設定 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TaskTrayMenuConfig {
+            get {
+                return ResourceManager.GetString("TaskTrayMenuConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   終了 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TaskTrayMenuQuit {
+            get {
+                return ResourceManager.GetString("TaskTrayMenuQuit", resourceCulture);
             }
         }
         
